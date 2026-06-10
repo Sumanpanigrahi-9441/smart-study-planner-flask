@@ -1,0 +1,19 @@
+
+<h2>Your Study Plan</h2>
+
+<div class="result-box">
+    <p><b>Subject:</b> {{ subject }}</p>
+    <p><b>Exam Date:</b> {{ exam_date }}</p>
+    <p><b>Days Left:</b> {{ days_left }}</p>
+    <p><b>Daily Study Hours:</b> {{ hours }}</p>
+
+    {% if days_left > 0 %}
+    <h3 style="color:green;">
+        Study {{ hours }} hours daily for next {{ days_left }} days.
+    </h3>
+    {% else %}
+    <h3 style="color:red;">
+        Exam date already passed.
+    </h3>
+    {% endif %}
+</div>
